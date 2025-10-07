@@ -4,612 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salmanul Haris | Software Engineer</title>
-    <style>
-        /* Modern Apple-inspired styling */
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #1d1d1f;
-            --accent-color: #0071e3;
-            --secondary-color: #86868b;
-            --card-bg: #f5f5f7;
-            --section-padding: 120px 0;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            overflow-x: hidden;
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Navigation */
-        .nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-
-        .nav-logo {
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--text-color);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-link {
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.3s;
-            position: relative;
-        }
-
-        .nav-link:hover {
-            color: var(--accent-color);
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent-color);
-            transition: width 0.3s;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        /* Hero section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-title {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.1;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1rem, 3vw, 1.5rem);
-            color: var(--secondary-color);
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .hero-contact {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            color: var(--secondary-color);
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .hero-scroll {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: var(--secondary-color);
-            font-size: 14px;
-            opacity: 0;
-        }
-
-        .hero-scroll::after {
-            content: '';
-            display: block;
-            width: 1px;
-            height: 60px;
-            background-color: var(--secondary-color);
-            margin-top: 10px;
-        }
-
-        /* Sections */
-        .section {
-            padding: var(--section-padding);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .section-title {
-            font-size: clamp(2rem, 6vw, 3.5rem);
-            font-weight: 700;
-            margin-bottom: 60px;
-            text-align: center;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .section-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* About section */
-        .about-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .about-card {
-            background-color: var(--card-bg);
-            border-radius: 18px;
-            padding: 40px;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .about-card-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: var(--accent-color);
-        }
-
-        /* Skills section */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .skill-category {
-            background-color: var(--card-bg);
-            border-radius: 18px;
-            padding: 30px;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .skill-category-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: var(--accent-color);
-        }
-
-        .skill-list {
-            list-style-type: none;
-        }
-
-        .skill-item {
-            margin-bottom: 12px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .skill-item::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-            font-size: 1.2rem;
-            line-height: 1;
-        }
-
-        /* Experience section */
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background-color: var(--secondary-color);
-            opacity: 0.2;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 60px;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .timeline-item:nth-child(odd) {
-            padding-right: calc(50% + 30px);
-            text-align: right;
-        }
-
-        .timeline-item:nth-child(even) {
-            padding-left: calc(50% + 30px);
-            text-align: left;
-        }
-
-        .timeline-date {
-            font-size: 14px;
-            color: var(--secondary-color);
-            margin-bottom: 10px;
-        }
-
-        .timeline-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .timeline-company {
-            font-size: 1rem;
-            color: var(--accent-color);
-            margin-bottom: 15px;
-        }
-
-        .timeline-desc {
-            list-style-type: none;
-        }
-
-        .timeline-desc li {
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .timeline-desc li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-            font-size: 1.2rem;
-            line-height: 1;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            top: 0;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: var(--accent-color);
-        }
-
-        .timeline-item:nth-child(odd) .timeline-dot {
-            right: calc(50% - 8px);
-        }
-
-        .timeline-item:nth-child(even) .timeline-dot {
-            left: calc(50% - 8px);
-        }
-
-        /* Projects section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .project-card {
-            background-color: var(--card-bg);
-            border-radius: 18px;
-            overflow: hidden;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .project-image {
-            height: 200px;
-            background-color: #ddd;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-image::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
-        }
-
-        .project-content {
-            padding: 30px;
-        }
-
-        .project-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .project-desc {
-            font-size: 1rem;
-            color: var(--secondary-color);
-            margin-bottom: 20px;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .tech-tag {
-            background-color: rgba(0, 113, 227, 0.1);
-            color: var(--accent-color);
-            padding: 4px 12px;
-            border-radius: 100px;
-            font-size: 12px;
-            font-weight: 500;
-        }
-
-        /* Education & Certifications */
-        .education-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .education-card {
-            background-color: var(--card-bg);
-            border-radius: 18px;
-            padding: 30px;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .education-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: var(--accent-color);
-        }
-
-        .education-subtitle {
-            font-size: 1rem;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-        }
-
-        .education-desc {
-            font-size: 0.9rem;
-        }
-
-        /* Additional Info */
-        .additional-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .additional-card {
-            background-color: var(--card-bg);
-            border-radius: 18px;
-            padding: 30px;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .additional-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: var(--accent-color);
-        }
-
-        .additional-list {
-            list-style-type: none;
-        }
-
-        .additional-list li {
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .additional-list li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-            font-size: 1.2rem;
-            line-height: 1;
-        }
-
-        /* Contact section */
-        .contact-content {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-text {
-            font-size: 1.25rem;
-            color: var(--secondary-color);
-            margin-bottom: 40px;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 60px;
-        }
-
-        .contact-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 12px 24px;
-            border: 2px solid var(--accent-color);
-            border-radius: 100px;
-            transition: all 0.3s;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .contact-link:hover {
-            background-color: var(--accent-color);
-            color: white;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 40px 0;
-            color: var(--secondary-color);
-            font-size: 14px;
-        }
-
-        /* Animations */
-        .animate {
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
-                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .animate.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .nav {
-                padding: 15px 20px;
-            }
-
-            .nav-links {
-                gap: 15px;
-            }
-
-            .section {
-                padding: 80px 0;
-            }
-
-            .timeline::before {
-                left: 30px;
-            }
-
-            .timeline-item:nth-child(odd),
-            .timeline-item:nth-child(even) {
-                padding: 0;
-                padding-left: 60px;
-                text-align: left;
-            }
-
-            .timeline-item:nth-child(odd) .timeline-dot,
-            .timeline-item:nth-child(even) .timeline-dot {
-                left: 22px;
-            }
-        }
-
-        /* Parallax background elements */
-        .parallax-bg {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .circle {
-            position: absolute;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(0,113,227,0.1) 0%, rgba(0,113,227,0) 70%);
-        }
-
-        .circle-1 {
-            width: 600px;
-            height: 600px;
-            top: -300px;
-            right: -300px;
-        }
-
-        .circle-2 {
-            width: 400px;
-            height: 400px;
-            bottom: -200px;
-            left: -200px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -633,7 +28,7 @@
         </div>
         <div class="hero-content">
             <h1 class="hero-title animate">Salmanul Haris</h1>
-            <p class="hero-subtitle animate">Software Engineer specializing in full-cycle development with expertise in Python, React, PHP, JavaScript, and cloud-based SaaS solutions.</p>
+            <p class="hero-subtitle animate">Software Engineer specializing in full-cycle development with expertise in Python, React, Flutter, PHP, React Native, JavaScript, and cloud-based SaaS solutions.</p>
             
             <div class="hero-contact">
                 <div class="contact-item animate" style="transition-delay: 0.2s">
@@ -664,11 +59,11 @@
                 </div>
                 <div class="about-card animate">
                     <h3 class="about-card-title">Technical Expertise</h3>
-                    <p>Specializing in Python, PHP, JavaScript, React, React Native, Express.js, and Node.js with strong cloud integration skills.</p>
+                    <p>Specializing in Python, PHP, Flutter, JavaScript, React, React Native, Express.js, and Node.js with strong cloud integration skills.</p>
                 </div>
                 <div class="about-card animate">
                     <h3 class="about-card-title">Domain Knowledge</h3>
-                    <p>Proficient in SaaS development, WordPress plugins, cloud architecture, and QA automation with Python Selenium.</p>
+                    <p>Proficient in Web and Mobile app development, SaaS and web applications, WordPress plugins and Website development, cloud architecture, and QA automation with Python Selenium.</p>
                 </div>
             </div>
         </div>
@@ -685,18 +80,20 @@
                         <li class="skill-item">Python</li>
                         <li class="skill-item">PHP</li>
                         <li class="skill-item">JavaScript</li>
+                        <li class="skill-item">Dart</li>
                     </ul>
                 </div>
                 <div class="skill-category animate">
                     <h3 class="skill-category-title">Frameworks</h3>
                     <ul class="skill-list">
-                        <li class="skill-item">Flask</li>
-                        <li class="skill-item">Django</li>
+                        <li class="skill-item">Flutter</li>
                         <li class="skill-item">React</li>
                         <li class="skill-item">React Native</li>
                         <li class="skill-item">Express.js</li>
                         <li class="skill-item">Node.js</li>
                         <li class="skill-item">WordPress</li>
+                        <li class="skill-item">Flask</li>
+                        <li class="skill-item">Django</li>
                     </ul>
                 </div>
                 <div class="skill-category animate">
@@ -723,11 +120,13 @@
                 <div class="skill-category animate">
                     <h3 class="skill-category-title">Cloud & DevOps</h3>
                     <ul class="skill-list">
+                        <li class="skill-item">Google Sheets Add-ons</li>
+                        <li class="skill-item">CI/CD Integration</li>
                         <li class="skill-item">AWS S3</li>
                         <li class="skill-item">AWS CloudFront</li>
                         <li class="skill-item">DigitalOcean</li>
                         <li class="skill-item">Linux Server Deployment</li>
-                        <li class="skill-item">CI/CD Integration</li>
+                        <li class="skill-item">Google Cloud Platform</li>
                     </ul>
                 </div>
                 <div class="skill-category animate">
@@ -752,8 +151,8 @@
                     <h3 class="timeline-title">Software Engineer</h3>
                     <div class="timeline-company">Acodez IT Solutions Pvt. Ltd., UL Cyberpark, Calicut</div>
                     <ul class="timeline-desc">
-                        <li>Built and maintained custom WordPress plugins, integrating third-party APIs</li>
-                        <li>Created React and React Native applications for various projects</li>
+                        <li>Built and maintained custom WordPress plugins, integrating third-party APIs, Created Google Sheets Add-ons</li>
+                        <li>Created Flutter, React and React Native applications for various projects</li>
                         <li>Integrated CI/CD pipelines to automate the deployment of WordPress plugins</li>
                         <li>Participated in internal hackathons and coding challenges</li>
                     </ul>
@@ -782,7 +181,36 @@
             <h2 class="section-title animate">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card animate">
-                    
+                    <div class="project-content">
+                        <h3 class="project-title">Mobile Applications</h3>
+                        <p class="project-desc">Developed various mobile applications using Flutter and React Native for diverse clients.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">SCSS</span>
+                            <span class="tech-tag">SASS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card animate">
+                    <div class="project-content">
+                        <h3 class="project-title">WordPress Website Development</h3>
+                        <p class="project-desc">Created and customized WordPress websites for various clients, ensuring responsive design and optimal performance.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">SCSS</span>
+                            <span class="tech-tag">SASS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card animate">
                     <div class="project-content">
                         <h3 class="project-title">WordPress Plugin Development</h3>
                         <p class="project-desc">Developed custom WordPress plugins for WooCommerce, enhancing store functionality.</p>
@@ -792,11 +220,12 @@
                             <span class="tech-tag">WordPress</span>
                             <span class="tech-tag">WooCommerce</span>
                             <span class="tech-tag">React</span>
+                            <span class="tech-tag">SCSS</span>
+                            <span class="tech-tag">SASS</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-card animate">
-                    
                     <div class="project-content">
                         <h3 class="project-title">Clinical Management SaaS (Dochours)</h3>
                         <p class="project-desc">Cloud-based clinical management system for seamless patient management with integrated payment processing.</p>
@@ -809,7 +238,6 @@
                     </div>
                 </div>
                 <div class="project-card animate">
-                    
                     <div class="project-content">
                         <h3 class="project-title">Form Builder SaaS (EasyForm)</h3>
                         <p class="project-desc">Web-based form builder with spam filtering and email notifications built with Python and AWS.</p>
@@ -822,7 +250,6 @@
                     </div>
                 </div>
                 <div class="project-card animate">
-                    
                     <div class="project-content">
                         <h3 class="project-title">Video Calling Platform</h3>
                         <p class="project-desc">Built a video conferencing platform with live chat and guest user invitations.</p>
@@ -834,7 +261,6 @@
                     </div>
                 </div>
                 <div class="project-card animate">
-                    
                     <div class="project-content">
                         <h3 class="project-title">Cloud-Based Blog Platform</h3>
                         <p class="project-desc">Developed a blogging platform with AWS S3 cloud storage integration.</p>
@@ -847,7 +273,6 @@
                     </div>
                 </div>
                 <div class="project-card animate">
-                    
                     <div class="project-content">
                         <h3 class="project-title">Quick Commerce Platform</h3>
                         <p class="project-desc">Full-stack e-commerce application for local businesses with quick delivery solutions and location tracking.</p>
@@ -904,9 +329,6 @@
                     <ul class="additional-list">
                         <li>English</li>
                         <li>Malayalam</li>
-                        <li>Hindi</li>
-                        <li>Arabic</li>
-                        <li>Tamil</li>
                     </ul>
                 </div>
                 <div class="additional-card animate">
@@ -951,62 +373,6 @@
         <p>© 2024 Salmanul Haris. All rights reserved.</p>
     </footer>
 
-    <script>
-        // Initialize animations on scroll
-        document.addEventListener('DOMContentLoaded', () => {
-            // Animate hero elements
-            setTimeout(() => {
-                document.querySelector('.hero-title').classList.add('active');
-                document.querySelector('.hero-subtitle').classList.add('active');
-                document.querySelectorAll('.contact-item').forEach((el, i) => {
-                    setTimeout(() => el.classList.add('active'), 100 * i);
-                });
-                document.querySelector('.hero-scroll').classList.add('active');
-            }, 300);
-
-            // Set up intersection observer for scroll animations
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-
-            // Observe all animate elements
-            document.querySelectorAll('.animate').forEach(el => {
-                observer.observe(el);
-            });
-
-            // Parallax effect for background elements
-            window.addEventListener('scroll', () => {
-                const scrollPosition = window.scrollY;
-                const circle1 = document.querySelector('.circle-1');
-                const circle2 = document.querySelector('.circle-2');
-                
-                circle1.style.transform = `translateY(${scrollPosition * 0.2}px)`;
-                circle2.style.transform = `translateY(${scrollPosition * 0.1}px)`;
-            });
-
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

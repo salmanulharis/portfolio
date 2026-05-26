@@ -3,393 +3,497 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Salmanul Haris — Software Engineer open to full-time roles. Full-stack web, mobile, SaaS, and WordPress experience.">
     <title>Salmanul Haris | Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="nav">
+    <div class="page-bg" aria-hidden="true">
+        <div class="gradient-orb orb-1" data-parallax="0.03"></div>
+        <div class="gradient-orb orb-2" data-parallax="0.05"></div>
+        <div class="gradient-orb orb-3" data-parallax="0.02"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <nav class="nav" id="nav">
         <div class="nav-container">
-            <a href="#" class="nav-logo">SH<span class="dot">.</span></a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
+            <a href="#" class="nav-logo" aria-label="Home">
+                <span class="logo-mark">SH</span><span class="logo-dot">.</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
             </button>
-            <div class="nav-links">
-                <a href="#about" class="nav-link"><span class="nav-num">01.</span> About</a>
-                <a href="#skills" class="nav-link"><span class="nav-num">02.</span> Skills</a>
-                <a href="#experience" class="nav-link"><span class="nav-num">03.</span> Experience</a>
-                <a href="#projects" class="nav-link"><span class="nav-num">04.</span> Projects</a>
-                <a href="#education" class="nav-link"><span class="nav-num">05.</span> Education</a>
-                <a href="#contact" class="nav-cta">Hire Me</a>
+            <div class="nav-links" id="nav-links">
+                <a href="#about" class="nav-link" data-section="about"><span class="nav-num">01</span> About</a>
+                <a href="#expertise" class="nav-link" data-section="expertise"><span class="nav-num">02</span> Expertise</a>
+                <a href="#skills" class="nav-link" data-section="skills"><span class="nav-num">03</span> Skills</a>
+                <a href="#experience" class="nav-link" data-section="experience"><span class="nav-num">04</span> Experience</a>
+                <a href="#projects" class="nav-link" data-section="projects"><span class="nav-num">05</span> Projects</a>
+                <a href="#contact" class="nav-cta" data-section="contact">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="parallax-bg">
-            <div class="circle circle-1"></div>
-            <div class="circle circle-2"></div>
-        </div>
-        <div class="hero-content">
-            <span class="hero-greeting animate">Hi, my name is</span>
-            <h1 class="hero-title animate">Salmanul Haris.</h1>
-            <h2 class="hero-subtitle animate">I build things for the web and mobile.</h2>
-            <p class="hero-desc animate">Software Engineer specializing in full-cycle development with expertise in Python, React, Flutter, PHP, React Native, JavaScript, and cloud-based SaaS solutions.</p>
-            
-            <div class="hero-btns animate">
-                <a href="mailto:salmanulharrish.sh@gmail.com" class="btn btn-primary">Hire Me</a>
-                <a href="#projects" class="btn btn-outline">View Projects</a>
-            </div>
-
-            <div class="hero-contact animate">
-                <div class="contact-item">✉️ salmanulharrish.sh@gmail.com</div>
-                <div class="contact-item">📞 +91 9656663010</div>
-            </div>
-
-            <div class="hero-socials animate">
-                <a href="https://github.com/salmanulharis" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/salmanul-haris-c-9b2b931a2" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <span>Scroll</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
-
-    <section id="about" class="section">
-        <div class="section-content">
-            <h2 class="section-title animate"><span class="sec-num">01.</span> Professional Summary</h2>
-            <div class="about-grid">
-                <div class="about-text animate">
-                    <p>Experienced Software Engineer with over four years of expertise in full-cycle software development, from concept to deployment and maintenance.</p>
-                    <p>Specializing in Python, PHP, Flutter, JavaScript, React, React Native, Express.js, and Node.js with strong cloud integration skills.</p>
-                    <p>Proficient in Web and Mobile app development, SaaS and web applications, WordPress plugins and Website development, cloud architecture, and QA automation with Python Selenium.</p>
-                    <br>
-                    <a href="assets/Resume - Salmanul Haris.pdf" class="btn btn-primary">Download Resume</a>
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="hero">
+            <div class="hero-inner">
+                <div class="hero-badge reveal">
+                    <span class="badge-dot"></span>
+                    Open to full-time & contract roles
+                </div>
+                <p class="hero-greeting reveal">Hi, I'm</p>
+                <h1 class="hero-title reveal">
+                    Salmanul <span class="text-gradient">Haris</span>
+                </h1>
+                <p class="hero-role reveal">
+                    Software Engineer · Full-Stack · Web & Mobile
+                </p>
+                <p class="hero-desc reveal">
+                    Software engineer with 4+ years shipping production web apps, mobile products, SaaS platforms, and WordPress solutions — from design through deployment, using Python, React, Flutter, PHP, and cloud tooling.
+                </p>
+                <div class="hero-actions reveal">
+                    <a href="mailto:salmanulharrish.sh@gmail.com" class="btn btn-primary btn-glow">
+                        <span>Get in Touch</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#projects" class="btn btn-glass">
+                        <span>View Projects</span>
+                    </a>
+                    <a href="assets/Resume - Salmanul Haris.pdf" class="btn btn-ghost" download>
+                        <i class="fas fa-download"></i>
+                        <span>Resume</span>
+                    </a>
+                </div>
+                <div class="hero-meta reveal">
+                    <a href="mailto:salmanulharrish.sh@gmail.com" class="hero-meta-item">
+                        <i class="fas fa-envelope"></i>
+                        salmanulharrish.sh@gmail.com
+                    </a>
+                    <a href="tel:+919656663010" class="hero-meta-item">
+                        <i class="fas fa-phone"></i>
+                        +91 9656663010
+                    </a>
+                </div>
+                <div class="hero-socials reveal">
+                    <a href="https://github.com/salmanulharis" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/salmanul-haris-c-9b2b931a2" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="skills" class="section">
-        <div class="section-content">
-            <h2 class="section-title animate"><span class="sec-num">02.</span> Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category animate">
-                    <h3 class="skill-category-title"><i class="fas fa-laptop-code"></i> Programming</h3>
-                    <ul class="skill-list">
-                        <li>Python</li>
-                        <li>PHP</li>
-                        <li>JavaScript</li>
-                        <li>Dart</li>
-                    </ul>
-                </div>
-                <div class="skill-category animate">
-                    <h3 class="skill-category-title"><i class="fas fa-layer-group"></i> Frameworks</h3>
-                    <ul class="skill-list">
-                        <li>Flutter</li>
-                        <li>React & React Native</li>
-                        <li>Express.js & Node.js</li>
-                        <li>WordPress</li>
-                        <li>Flask</li>
-                        <li>Django</li>
-                    </ul>
-                </div>
-                <div class="skill-category animate">
-                    <h3 class="skill-category-title"><i class="fas fa-desktop"></i> Web Technologies</h3>
-                    <ul class="skill-list">
-                        <li>HTML & CSS</li>
-                        <li>SCSS</li>
-                        <li>jQuery</li>
-                        <li>Bootstrap</li>
-                        <li>REST API</li>
-                        <li>Microservices</li>
-                    </ul>
-                </div>
-                <div class="skill-category animate">
-                    <h3 class="skill-category-title"><i class="fas fa-database"></i> Databases</h3>
-                    <ul class="skill-list">
-                        <li>MySQL</li>
-                        <li>PostgreSQL</li>
-                        <li>SQLite</li>
-                        <li>MongoDB</li>
-                    </ul>
-                </div>
-                <div class="skill-category animate">
-                    <h3 class="skill-category-title"><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
-                    <ul class="skill-list">
-                        <li>Google Sheets Add-ons</li>
-                        <li>CI/CD Integration</li>
-                        <li>AWS S3</li>
-                        <li>AWS CloudFront</li>
-                        <li>DigitalOcean</li>
-                        <li>Linux Server Deployment</li>
-                        <li>Google Cloud Platform</li>
-                    </ul>
-                </div>
-                <div class="skill-category animate">
-                    <h3 class="skill-category-title"><i class="fas fa-cogs"></i> Other</h3>
-                    <ul class="skill-list">
-                        <li>Python Selenium</li>
-                        <li>QA Automation</li>
-                        <li>Git & GitHub</li>
-                    </ul>
+            <div class="hero-visual reveal" data-tilt>
+                <div class="hero-card glass-card">
+                    <div class="hero-card-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">portfolio.ts</span>
+                    </div>
+                    <pre class="hero-code"><code><span class="code-keyword">const</span> engineer = {
+  <span class="code-key">name</span>: <span class="code-string">'Salmanul Haris'</span>,
+  <span class="code-key">role</span>: <span class="code-string">'Software Engineer'</span>,
+  <span class="code-key">focus</span>: [
+    <span class="code-string">'Web & Mobile'</span>,
+    <span class="code-string">'SaaS'</span>,
+    <span class="code-string">'WordPress'</span>
+  ],
+  <span class="code-key">stack</span>: [<span class="code-string">'Python'</span>, <span class="code-string">'React'</span>, <span class="code-string">'Flutter'</span>],
+  <span class="code-key">available</span>: <span class="code-bool">true</span>
+};</code></pre>
                 </div>
             </div>
-        </div>
-    </section>
+            <a href="#about" class="hero-scroll" aria-label="Scroll to about">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </a>
+        </section>
 
-    <section id="experience" class="section">
-        <div class="section-content">
-            <h2 class="section-title animate"><span class="sec-num">03.</span> Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item animate">
-                    <div class="timeline-header">
+        <!-- About -->
+        <section id="about" class="section" data-section>
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-label">01 — About</span>
+                    <h2 class="section-title">Engineering software<br>that <span class="text-gradient">ships</span></h2>
+                </header>
+                <div class="about-layout">
+                    <div class="about-content reveal">
+                        <p class="lead">Experienced Software Engineer with over four years of expertise in full-cycle software development, from concept to deployment and maintenance.</p>
+                        <p>Specializing in Python, PHP, Flutter, JavaScript, React, React Native, Express.js, and Node.js with strong cloud integration skills.</p>
+                        <p>Proficient in web and mobile app development, SaaS applications, WordPress plugins and websites, cloud architecture, and QA automation with Python Selenium.</p>
+                        <a href="assets/Resume - Salmanul Haris.pdf" class="btn btn-primary" download>
+                            <i class="fas fa-file-pdf"></i>
+                            Download Resume
+                        </a>
+                    </div>
+                    <div class="stats-grid reveal">
+                        <div class="stat-card glass-card">
+                            <span class="stat-value">4+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <span class="stat-value">Full</span>
+                            <span class="stat-label">Stack Development</span>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <span class="stat-value">10+</span>
+                            <span class="stat-label">Live Products & Plugins</span>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <span class="stat-value">SaaS</span>
+                            <span class="stat-label">Web · Mobile · Cloud</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise -->
+        <section id="expertise" class="section section-alt" data-section>
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-label">02 — Expertise</span>
+                    <h2 class="section-title">What I bring to a <span class="text-gradient">team</span></h2>
+                    <p class="section-subtitle">Core areas where I've delivered impact in product teams — hands-on across the stack, from planning through production.</p>
+                </header>
+                <div class="services-grid">
+                    <article class="service-card glass-card reveal">
+                        <div class="service-icon"><i class="fas fa-globe"></i></div>
+                        <h3>Web Development</h3>
+                        <p>Building responsive web apps and SPAs with React, modern JavaScript, and solid front-end architecture.</p>
+                    </article>
+                    <article class="service-card glass-card reveal">
+                        <div class="service-icon"><i class="fas fa-code"></i></div>
+                        <h3>Full-Stack Engineering</h3>
+                        <p>End-to-end ownership of features — SaaS platforms, internal tools, and apps from API to UI.</p>
+                    </article>
+                    <article class="service-card glass-card reveal">
+                        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Mobile Development</h3>
+                        <p>Cross-platform apps with Flutter and React Native, shipped to production and published on app stores.</p>
+                    </article>
+                    <article class="service-card glass-card reveal">
+                        <div class="service-icon"><i class="fas fa-server"></i></div>
+                        <h3>Backend & APIs</h3>
+                        <p>REST APIs, microservices, PostgreSQL/MySQL, and cloud integrations (AWS, GCP) in live products.</p>
+                    </article>
+                    <article class="service-card glass-card reveal">
+                        <div class="service-icon"><i class="fab fa-wordpress"></i></div>
+                        <h3>WordPress & WooCommerce</h3>
+                        <p>Custom plugins and WooCommerce extensions — including published plugins on WordPress.org.</p>
+                    </article>
+                    <article class="service-card glass-card reveal">
+                        <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                        <h3>Integrations & Automation</h3>
+                        <p>Google Sheets add-ons, third-party APIs, CI/CD pipelines, and QA automation with Selenium.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section" data-section>
+            <div class="container">
+                <header class="section-header section-header-center reveal">
+                    <span class="section-label">03 — Tools & Technologies</span>
+                    <h2 class="section-title">Tech stack I work with</h2>
+                    <p class="section-subtitle">Languages, frameworks, and tools I've used in production across my roles.</p>
+                </header>
+                <div class="tech-grid reveal">
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fab fa-python"></i><span>Python</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fab fa-php"></i><span>PHP</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fab fa-js"></i><span>JavaScript</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fas fa-mobile-alt"></i><span>Dart / Flutter</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fab fa-react"></i><span>React</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fab fa-react"></i><span>React Native</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fab fa-node-js"></i><span>Node.js</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fas fa-bolt"></i><span>Express.js</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fab fa-wordpress"></i><span>WordPress</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fas fa-flask"></i><span>Flask</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fas fa-leaf"></i><span>Django</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fab fa-html5"></i><span>HTML & CSS</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fab fa-sass"></i><span>SCSS</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fas fa-database"></i><span>PostgreSQL</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fas fa-database"></i><span>MySQL</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fas fa-database"></i><span>MongoDB</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fab fa-aws"></i><span>AWS</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fab fa-google"></i><span>Google Cloud</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fas fa-cloud"></i><span>DigitalOcean</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fab fa-git-alt"></i><span>Git</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fas fa-robot"></i><span>Selenium QA</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fas fa-plug"></i><span>REST APIs</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fas fa-cubes"></i><span>Microservices</span></div>
+                    <div class="tech-item glass-card" data-tilt-subtle><i class="fab fa-linux"></i><span>Linux</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="section section-alt" data-section>
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-label">04 — Experience</span>
+                    <h2 class="section-title">Where I've <span class="text-gradient">worked</span></h2>
+                </header>
+                <div class="timeline">
+                    <article class="timeline-card glass-card reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Nov 2024 — Present</span>
+                            <span class="timeline-badge">Current</span>
+                        </div>
                         <h3 class="timeline-role">Software Engineer</h3>
-                        <span class="timeline-date">November 2024 - Present</span>
-                    </div>
-                    <div class="timeline-company">Acodez IT Solutions Pvt. Ltd. <span class="location">@ UL Cyberpark, Calicut</span></div>
-                    <ul class="timeline-desc">
-                        <li>Built and maintained custom WordPress plugins, integrating third-party APIs, and created Google Sheets Add-ons.</li>
-                        <li>Created Flutter, React and React Native applications for various projects.</li>
-                        <li>Integrated CI/CD pipelines to automate the deployment of WordPress plugins.</li>
-                        <li>Participated in internal hackathons and coding challenges.</li>
-                    </ul>
-                </div>
-                <div class="timeline-item animate">
-                    <div class="timeline-header">
+                        <p class="timeline-company">Acodez IT Solutions Pvt. Ltd. <span>· UL Cyberpark, Calicut</span></p>
+                        <ul class="timeline-list">
+                            <li>Built and maintained custom WordPress plugins, integrating third-party APIs, and created Google Sheets Add-ons.</li>
+                            <li>Created Flutter, React and React Native applications for various projects.</li>
+                            <li>Integrated CI/CD pipelines to automate the deployment of WordPress plugins.</li>
+                            <li>Participated in internal hackathons and coding challenges.</li>
+                        </ul>
+                    </article>
+                    <article class="timeline-card glass-card reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Apr 2021 — Nov 2024</span>
+                        </div>
                         <h3 class="timeline-role">Software Engineer</h3>
-                        <span class="timeline-date">April 2021 - November 2024</span>
-                    </div>
-                    <div class="timeline-company">Zennode Technologies LLP <span class="location">@ Govt. Cyberpark, Calicut</span></div>
-                    <ul class="timeline-desc">
-                        <li>Developed SaaS applications using Python Flask, WordPress (WooCommerce), and JavaScript.</li>
-                        <li>Built and maintained custom WordPress plugins, integrating third-party APIs.</li>
-                        <li>Optimized cloud storage solutions using AWS S3 for scalable applications.</li>
-                        <li>Led QA automation efforts with Selenium, improving testing efficiency.</li>
-                        <li>Managed deployment and maintenance of web applications on Linux servers.</li>
-                    </ul>
+                        <p class="timeline-company">Zennode Technologies LLP <span>· Govt. Cyberpark, Calicut</span></p>
+                        <ul class="timeline-list">
+                            <li>Developed SaaS applications using Python Flask, WordPress (WooCommerce), and JavaScript.</li>
+                            <li>Built and maintained custom WordPress plugins, integrating third-party APIs.</li>
+                            <li>Optimized cloud storage solutions using AWS S3 for scalable applications.</li>
+                            <li>Led QA automation efforts with Selenium, improving testing efficiency.</li>
+                            <li>Managed deployment and maintenance of web applications on Linux servers.</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="section">
-        <div class="section-content">
-            <h2 class="section-title animate"><span class="sec-num">04.</span> Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card animate">
-                    <div class="project-top">
-                        <i class="far fa-folder"></i>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        <!-- Projects -->
+        <section id="projects" class="section" data-section>
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-label">05 — Projects</span>
+                    <h2 class="section-title">Featured <span class="text-gradient">work</span></h2>
+                    <p class="section-subtitle">Selected work from my professional experience — apps, plugins, and platforms in production.</p>
+                </header>
+                <div class="project-filters reveal" role="tablist" aria-label="Filter projects">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+                    <button class="filter-btn" data-filter="web" role="tab">Web App</button>
+                    <button class="filter-btn" data-filter="mobile" role="tab">Mobile</button>
+                    <button class="filter-btn" data-filter="wordpress" role="tab">WordPress</button>
+                    <button class="filter-btn" data-filter="addon" role="tab">Add-ons</button>
+                </div>
+                <div class="projects-grid" id="projects-grid">
+                    <article class="project-card glass-card reveal" data-category="web">
+                        <div class="project-card-glow"></div>
+                        <div class="project-card-top">
+                            <span class="project-type-badge web">Web App</span>
+                            <div class="project-card-links">
+                                <a href="https://dochours.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Dochours"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <h3 class="project-title">Mobile Applications</h3>
-                    <p class="project-desc">Developed various mobile applications using Flutter and React Native for diverse clients.</p>
-                    <div class="project-tech">
-                        <span>Flutter</span><span>React Native</span><span>Dart</span><span>JavaScript</span><span>SCSS</span>
-                    </div>
-                </div>
-                
-                <div class="project-card animate">
-                    <div class="project-top">
-                        <i class="far fa-folder"></i>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <h3>Dochours – Clinical Management SaaS</h3>
+                        <p>Cloud-based clinical management system for appointments, billing, and patient records.</p>
+                        <div class="project-tags"><span>Flask</span><span>PostgreSQL</span><span>Stripe</span></div>
+                    </article>
+                    <article class="project-card glass-card reveal" data-category="addon">
+                        <div class="project-card-glow"></div>
+                        <div class="project-card-top">
+                            <span class="project-type-badge addon">Add-on</span>
+                            <div class="project-card-links">
+                                <a href="https://workspace.google.com/marketplace/app/woosync/555512713691" target="_blank" rel="noopener noreferrer" aria-label="Visit WooSync"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <h3 class="project-title">Google Sheet Addons</h3>
-                    <p class="project-desc">Developed various Google Sheet addons to enhance productivity and automate tasks for users using Google Apps Script.</p>
-                    <div class="project-tech">
-                        <span>JavaScript</span><span>Google Apps Script</span><span>HTML</span><span>CSS</span>
-                    </div>
-                </div>
-                
-                <div class="project-card animate">
-                    <div class="project-top">
-                        <i class="far fa-folder"></i>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <h3>WooSync – WooCommerce to Google Sheets</h3>
+                        <p>Google Sheets add-on to sync WooCommerce store data directly into spreadsheets.</p>
+                        <div class="project-tags"><span>Apps Script</span><span>JavaScript</span></div>
+                    </article>
+                    <article class="project-card glass-card reveal" data-category="mobile">
+                        <div class="project-card-glow"></div>
+                        <div class="project-card-top">
+                            <span class="project-type-badge mobile">Mobile</span>
+                            <div class="project-card-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.techbysh.cliply" target="_blank" rel="noopener noreferrer" aria-label="Visit Cliply"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <h3 class="project-title">WordPress Website Development</h3>
-                    <p class="project-desc">Created and customized WordPress websites for various clients, ensuring responsive design and optimal performance using PHP.</p>
-                    <div class="project-tech">
-                        <span>PHP</span><span>MySQL</span><span>WordPress</span><span>JavaScript</span>
-                    </div>
-                </div>
-
-                <div class="project-card animate">
-                    <div class="project-top">
-                        <i class="far fa-folder"></i>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <h3>Cliply — Save text. Copy later.</h3>
+                        <p>Mobile clipboard manager app to save and organize text snippets for later use.</p>
+                        <div class="project-tags"><span>Flutter</span><span>Dart</span></div>
+                    </article>
+                    <article class="project-card glass-card reveal" data-category="mobile">
+                        <div class="project-card-glow"></div>
+                        <div class="project-card-top">
+                            <span class="project-type-badge mobile">Mobile</span>
+                            <div class="project-card-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.techbysh.fliptap" target="_blank" rel="noopener noreferrer" aria-label="Visit Fliptap"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <h3 class="project-title">WordPress Plugin Development</h3>
-                    <p class="project-desc">Developed custom WooCommerce plugins, enhancing store functionality and integrating payment systems.</p>
-                    <div class="project-tech">
-                        <span>PHP</span><span>WooCommerce</span><span>React</span><span>SCSS</span>
-                    </div>
-                </div>
-                
-                <div class="project-card animate">
-                    <div class="project-top">
-                        <i class="far fa-folder"></i>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <h3>Fliptap — Counter & Tally App</h3>
+                        <p>A simple counter app with motion, touch controls, and smooth haptic feedback.</p>
+                        <div class="project-tags"><span>Flutter</span><span>Dart</span></div>
+                    </article>
+                    <article class="project-card glass-card reveal" data-category="wordpress">
+                        <div class="project-card-glow"></div>
+                        <div class="project-card-top">
+                            <span class="project-type-badge wordpress">WordPress</span>
+                            <div class="project-card-links">
+                                <a href="https://wordpress.org/plugins/offload-media-cloud-storage/" target="_blank" rel="noopener noreferrer" aria-label="Visit plugin"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <h3 class="project-title">Clinical Management SaaS (Dochours)</h3>
-                    <p class="project-desc">Cloud-based clinical management system for seamless patient management built with Flask and integrated payment processing.</p>
-                    <div class="project-tech">
-                        <span>Flask</span><span>PostgreSQL</span><span>Nginx</span><span>Stripe API</span>
-                    </div>
-                </div>
-
-                <div class="project-card animate">
-                    <div class="project-top">
-                        <i class="far fa-folder"></i>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <h3>Offload Media – Cloud Storage</h3>
+                        <p>WordPress plugin to offload media to AWS S3, DigitalOcean Spaces, and Wasabi.</p>
+                        <div class="project-tags"><span>PHP</span><span>React</span></div>
+                    </article>
+                    <article class="project-card glass-card reveal" data-category="wordpress">
+                        <div class="project-card-glow"></div>
+                        <div class="project-card-top">
+                            <span class="project-type-badge wordpress">WordPress</span>
+                            <div class="project-card-links">
+                                <a href="https://wordpress.org/plugins/woo-checkout-field-editor-pro/" target="_blank" rel="noopener noreferrer" aria-label="Visit plugin"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <h3 class="project-title">Form Builder SaaS (EasyForm)</h3>
-                    <p class="project-desc">Web-based form builder with spam filtering (Akismet) and email notifications built with Python and AWS.</p>
-                    <div class="project-tech">
-                        <span>Flask</span><span>PostgreSQL</span><span>Akismet API</span><span>AWS</span>
-                    </div>
-                </div>
-                
-                <div class="project-card animate">
-                    <div class="project-top">
-                        <i class="far fa-folder"></i>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <h3>Checkout Field Editor for WooCommerce</h3>
+                        <p>Customize and manage checkout fields in WooCommerce stores.</p>
+                        <div class="project-tags"><span>PHP</span><span>WooCommerce</span><span>React</span></div>
+                    </article>
+                    <article class="project-card glass-card reveal" data-category="web">
+                        <div class="project-card-glow"></div>
+                        <div class="project-card-top">
+                            <span class="project-type-badge web">Web App</span>
                         </div>
-                    </div>
-                    <h3 class="project-title">Video Calling Platform</h3>
-                    <p class="project-desc">Built a video conferencing platform with live chat and guest user invitations using the Vonage API.</p>
-                    <div class="project-tech">
-                        <span>Flask</span><span>PostgreSQL</span><span>Vonage API</span>
-                    </div>
-                </div>
-
-                <div class="project-card animate">
-                    <div class="project-top">
-                        <i class="far fa-folder"></i>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <h3>EasyForm – Form Builder SaaS</h3>
+                        <p>Web-based form builder with spam filtering (Akismet) and email notifications.</p>
+                        <div class="project-tags"><span>Flask</span><span>PostgreSQL</span><span>AWS</span></div>
+                    </article>
+                    <article class="project-card glass-card reveal" data-category="web">
+                        <div class="project-card-glow"></div>
+                        <div class="project-card-top">
+                            <span class="project-type-badge web">Web App</span>
                         </div>
-                    </div>
-                    <h3 class="project-title">Cloud-Based Blog Platform</h3>
-                    <p class="project-desc">Developed a blogging platform with AWS S3 cloud storage and AWS CloudFront CDN integration.</p>
-                    <div class="project-tech">
-                        <span>Flask</span><span>PostgreSQL</span><span>AWS S3</span><span>AWS CloudFront</span>
-                    </div>
-                </div>
-
-                <div class="project-card animate">
-                    <div class="project-top">
-                        <i class="far fa-folder"></i>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <h3>Video Calling Platform</h3>
+                        <p>Video conferencing platform with live chat and guest invitations using the Vonage API.</p>
+                        <div class="project-tags"><span>Flask</span><span>PostgreSQL</span><span>Vonage API</span></div>
+                    </article>
+                    <article class="project-card glass-card reveal" data-category="mobile">
+                        <div class="project-card-glow"></div>
+                        <div class="project-card-top">
+                            <span class="project-type-badge mobile">Full-Stack</span>
                         </div>
-                    </div>
-                    <h3 class="project-title">Quick Commerce Platform</h3>
-                    <p class="project-desc">Full-stack e-commerce application for local businesses with quick delivery solutions and location tracking.</p>
-                    <div class="project-tech">
-                        <span>React</span><span>React Native</span><span>Express.js</span><span>PostgreSQL</span><span>Geo Coding</span>
-                    </div>
+                        <h3>Quick Commerce Platform</h3>
+                        <p>E-commerce application for local businesses with quick delivery and location tracking.</p>
+                        <div class="project-tags"><span>React</span><span>React Native</span><span>Express.js</span><span>PostgreSQL</span></div>
+                    </article>
                 </div>
-
-            </div>
-            <div class="view-more-container animate">
-                <a href="https://salmanulharis.github.io/portfolio/projects/projects.html" class="btn btn-outline">View Full Project Archive</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="education" class="section">
-        <div class="section-content">
-            <h2 class="section-title animate"><span class="sec-num">05.</span> Education & Additional Info</h2>
-            <div class="education-grid">
-                <div class="edu-card animate">
-                    <h3>B.Tech - Electronics and Communication Engineering</h3>
-                    <p class="edu-school">Institute of Engineering and Technology, Calicut University | 2016 - 2020</p>
-                </div>
-                <div class="edu-card animate">
-                    <h3>Certifications & Training</h3>
-                    <ul class="edu-list">
-                        <li>Python for Everybody & Python Data Structures – University of Michigan (Coursera)</li>
-                        <li>Python Full Stack Development Training – Quest Innovative Solutions</li>
-                        <li>AI Workshop – IIT Palakkad</li>
-                    </ul>
-                </div>
-                <div class="edu-card animate">
-                    <h3>Events & Conferences</h3>
-                    <ul class="edu-list">
-                        <li>WordCamp Kerala</li>
-                        <li>Hackathon & Coding Competitions</li>
-                        <li>Tech Meetups & Developer Conferences</li>
-                    </ul>
+                <div class="section-cta reveal">
+                    <a href="projects/projects.html" class="btn btn-glass">
+                        View Full Project Archive
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
-            
-            <div class="additional-grid">
-                <div class="additional-card animate">
-                    <h3 class="additional-title">Languages</h3>
-                    <ul class="additional-list">
-                        <li>English</li>
-                        <li>Malayalam</li>
-                    </ul>
-                </div>
-                <div class="additional-card animate">
-                    <h3 class="additional-title">Operating Systems</h3>
-                    <ul class="additional-list">
-                        <li>Windows</li>
-                        <li>Linux</li>
-                        <li>macOS</li>
-                    </ul>
-                </div>
-                <div class="additional-card animate">
-                    <h3 class="additional-title">Soft Skills</h3>
-                    <ul class="additional-list">
-                        <li>Agile Methodologies</li>
-                        <li>Scrum</li>
-                        <li>Problem Solving</li>
-                        <li>Project Management</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="section contact-section">
-        <div class="section-content center-content">
-            <p class="contact-overline animate">06. What's Next?</p>
-            <h2 class="contact-title animate">Get In Touch</h2>
-            <p class="contact-text animate">
-                I'm currently open to new opportunities and collaborations. Feel free to reach out if you'd like to work together or just say hello!
-            </p>
-            <a href="mailto:salmanulharrish.sh@gmail.com" class="btn btn-primary big-btn animate">Say Hello</a>
-            
-            <div class="footer-socials">
-                <a href="https://github.com/salmanulharis" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/salmanul-haris-c-9b2b931a2" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <!-- Education -->
+        <section id="education" class="section section-alt" data-section>
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-label">Education & More</span>
+                    <h2 class="section-title">Background & <span class="text-gradient">growth</span></h2>
+                </header>
+                <div class="education-grid">
+                    <article class="edu-card glass-card reveal">
+                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>B.Tech — Electronics & Communication Engineering</h3>
+                        <p>Institute of Engineering and Technology, Calicut University · 2016 — 2020</p>
+                    </article>
+                    <article class="edu-card glass-card reveal">
+                        <div class="edu-icon"><i class="fas fa-certificate"></i></div>
+                        <h3>Certifications & Training</h3>
+                        <ul>
+                            <li>Python for Everybody & Python Data Structures — University of Michigan (Coursera)</li>
+                            <li>Python Full Stack Development Training — Quest Innovative Solutions</li>
+                            <li>AI Workshop — IIT Palakkad</li>
+                        </ul>
+                    </article>
+                    <article class="edu-card glass-card reveal">
+                        <div class="edu-icon"><i class="fas fa-users"></i></div>
+                        <h3>Events & Community</h3>
+                        <ul>
+                            <li>WordCamp Kerala</li>
+                            <li>Hackathons & Coding Competitions</li>
+                            <li>Tech Meetups & Developer Conferences</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="extras-grid reveal">
+                    <div class="extra-pill glass-card"><strong>Languages</strong> English, Malayalam</div>
+                    <div class="extra-pill glass-card"><strong>OS</strong> Windows, Linux, macOS</div>
+                    <div class="extra-pill glass-card"><strong>Soft Skills</strong> Agile, Scrum, Problem Solving, Project Management</div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section contact-section" data-section>
+            <div class="container">
+                <div class="contact-wrapper glass-card reveal">
+                    <div class="contact-info">
+                        <span class="section-label">06 — Contact</span>
+                        <h2 class="section-title">Interested in <span class="text-gradient">working together?</span></h2>
+                        <p>I'm open to full-time and contract software engineering roles. Recruiters and hiring managers — feel free to reach out. I'll respond as soon as I can.</p>
+                        <div class="contact-details">
+                            <a href="mailto:salmanulharrish.sh@gmail.com" class="contact-detail">
+                                <i class="fas fa-envelope"></i>
+                                <span>salmanulharrish.sh@gmail.com</span>
+                            </a>
+                            <a href="tel:+919656663010" class="contact-detail">
+                                <i class="fas fa-phone"></i>
+                                <span>+91 9656663010</span>
+                            </a>
+                        </div>
+                        <div class="contact-socials">
+                            <a href="https://github.com/salmanulharis" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/salmanul-haris-c-9b2b931a2" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="e.g. Software Engineer role" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Brief note about the role or team..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-glow btn-full">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <p>© 2024 Salmanul Haris. All rights reserved.</p>
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Salmanul Haris. Crafted with care.</p>
+            <a href="#hero" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+        </div>
     </footer>
 
     <script src="script.js"></script>

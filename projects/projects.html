@@ -1,353 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Full project archive — Salmanul Haris, Software Engineer">
     <title>All Projects | Salmanul Haris</title>
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Base Styles -->
     <link rel="stylesheet" href="../styles.css">
-    <!-- Page Styles -->
     <link rel="stylesheet" href="projects.css">
 </head>
 <body>
+    <div class="page-bg" aria-hidden="true">
+        <div class="gradient-orb orb-1" data-parallax="0.03"></div>
+        <div class="gradient-orb orb-2" data-parallax="0.05"></div>
+        <div class="grid-overlay"></div>
+    </div>
 
-    <!-- NAV -->
-    <nav class="nav">
+    <nav class="nav scrolled" id="nav">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">SH<span class="dot">.</span></a>
-            <div class="nav-links">
-                <a href="https://salmanulharis.github.io/portfolio/" class="nav-link">← Back</a>
-                <a href="mailto:salmanulharrish.sh@gmail.com" class="nav-cta">Hire Me</a>
+            <a href="../index.html" class="nav-logo" aria-label="Home">
+                <span class="logo-mark">SH</span><span class="logo-dot">.</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="../index.html" class="nav-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+                <a href="mailto:salmanulharrish.sh@gmail.com" class="nav-cta">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- HEADER -->
-    <header class="projects-header">
-        <h1 class="header-title animate">Major Projects</h1>
-        <p class="header-desc animate">
-            A complete list of production, freelance, and internal projects I’ve worked on.
-        </p>
-    </header>
-
-    <!-- PROJECT LIST -->
-    <main class="section projects-archive" style="padding-top: 0px;">
-        <div class="projects-list">
-
-            <!-- PROJECT - Dochours -->
-            <article class="project-row animate">
-                <div class="project-row-header">
-                    <div>
-                        <span class="project-type web">Web App</span>
-                        <h3>
-                            <a href="https://dochours.com" target="_blank" rel="noopener">
-                                Dochours – Clinical Management SaaS
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://dochours.com" target="_blank" title="Live">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <p>
-                    Cloud-based clinical management system for appointments,
-                    billing, and patient records.
+    <main class="archive-page">
+        <header class="archive-header">
+            <div class="container">
+                <span class="section-label reveal">Project Archive</span>
+                <h1 class="archive-title reveal">Major <span class="text-gradient">Projects</span></h1>
+                <p class="archive-desc reveal">
+                    A complete list of production and internal projects from my professional work.
                 </p>
-
-                <div class="project-meta">
-                    <span>Flask</span>
-                    <span>PostgreSQL</span>
-                    <span>Stripe</span>
+                <div class="archive-filters reveal" role="tablist">
+                    <button class="filter-btn active" data-filter="all" aria-selected="true">All</button>
+                    <button class="filter-btn" data-filter="web">Web App</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="wordpress">WordPress</button>
+                    <button class="filter-btn" data-filter="addon">Add-ons</button>
                 </div>
-            </article>
+            </div>
+        </header>
 
-            <!-- PROJECT - WooSync -->
-            <article class="project-row animate">
-                <div class="project-row-header">
-                    <div>
-                        <span class="project-type addon">Google Sheets Add-on</span>
-                        <h3>
-                            <a href="https://workspace.google.com/marketplace/app/woosync/555512713691?flow_type=2" target="_blank" rel="noopener">
-                                WooSync – WooCommerce to Google Sheets Add-on
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://workspace.google.com/marketplace/app/woosync/555512713691?flow_type=2" target="_blank" title="Live">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
+        <section class="archive-list section">
+            <div class="container">
+                <div class="projects-list">
+
+                    <article class="project-row glass-card reveal" data-category="web">
+                        <div class="project-row-glow"></div>
+                        <div class="project-row-header">
+                            <div>
+                                <span class="project-type-badge web">Web App</span>
+                                <h3><a href="https://dochours.com" target="_blank" rel="noopener">Dochours – Clinical Management SaaS</a></h3>
+                            </div>
+                            <a href="https://dochours.com" target="_blank" rel="noopener" class="project-row-link" aria-label="Visit Dochours"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <p>Cloud-based clinical management system for appointments, billing, and patient records.</p>
+                        <div class="project-tags"><span>Flask</span><span>PostgreSQL</span><span>Stripe</span></div>
+                    </article>
+
+                    <article class="project-row glass-card reveal" data-category="addon">
+                        <div class="project-row-glow"></div>
+                        <div class="project-row-header">
+                            <div>
+                                <span class="project-type-badge addon">Add-on</span>
+                                <h3><a href="https://workspace.google.com/marketplace/app/woosync/555512713691?flow_type=2" target="_blank" rel="noopener">WooSync – WooCommerce to Google Sheets</a></h3>
+                            </div>
+                            <a href="https://workspace.google.com/marketplace/app/woosync/555512713691?flow_type=2" target="_blank" rel="noopener" class="project-row-link" aria-label="Visit WooSync"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <p>Google Sheets add-on to sync WooCommerce store data directly into spreadsheets.</p>
+                        <div class="project-tags"><span>Apps Script</span><span>JavaScript</span></div>
+                    </article>
+
+                    <article class="project-row glass-card reveal" data-category="mobile">
+                        <div class="project-row-glow"></div>
+                        <div class="project-row-header">
+                            <div>
+                                <span class="project-type-badge mobile">Mobile</span>
+                                <h3><a href="https://play.google.com/store/apps/details?id=com.techbysh.cliply&hl=en_IN" target="_blank" rel="noopener">Cliply — Save text. Copy later.</a></h3>
+                            </div>
+                            <a href="https://play.google.com/store/apps/details?id=com.techbysh.cliply&hl=en_IN" target="_blank" rel="noopener" class="project-row-link" aria-label="Visit Cliply"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <p>Mobile clipboard manager app to save and organize text snippets for later use.</p>
+                        <div class="project-tags"><span>Flutter</span><span>Dart</span></div>
+                    </article>
+
+                    <article class="project-row glass-card reveal" data-category="mobile">
+                        <div class="project-row-glow"></div>
+                        <div class="project-row-header">
+                            <div>
+                                <span class="project-type-badge mobile">Mobile</span>
+                                <h3><a href="https://play.google.com/store/apps/details?id=com.techbysh.fliptap&hl=en_IN" target="_blank" rel="noopener">Fliptap — Counter & Tally App</a></h3>
+                            </div>
+                            <a href="https://play.google.com/store/apps/details?id=com.techbysh.fliptap&hl=en_IN" target="_blank" rel="noopener" class="project-row-link" aria-label="Visit Fliptap"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <p>A simple counter app with motion, touch controls, and smooth haptic feedback.</p>
+                        <div class="project-tags"><span>Flutter</span><span>Dart</span></div>
+                    </article>
+
+                    <article class="project-row glass-card reveal" data-category="wordpress">
+                        <div class="project-row-glow"></div>
+                        <div class="project-row-header">
+                            <div>
+                                <span class="project-type-badge wordpress">WordPress</span>
+                                <h3><a href="https://wordpress.org/plugins/offload-media-cloud-storage/" target="_blank" rel="noopener">Offload Media – Cloud Storage</a></h3>
+                            </div>
+                            <a href="https://wordpress.org/plugins/offload-media-cloud-storage/" target="_blank" rel="noopener" class="project-row-link" aria-label="Visit plugin"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <p>WordPress plugin to offload media files to AWS S3, DigitalOcean Spaces, and Wasabi.</p>
+                        <div class="project-tags"><span>PHP</span><span>React</span></div>
+                    </article>
+
+                    <article class="project-row glass-card reveal" data-category="wordpress">
+                        <div class="project-row-glow"></div>
+                        <div class="project-row-header">
+                            <div>
+                                <span class="project-type-badge wordpress">WordPress</span>
+                                <h3><a href="https://wordpress.org/plugins/woo-checkout-field-editor-pro/" target="_blank" rel="noopener">Checkout Field Editor for WooCommerce</a></h3>
+                            </div>
+                            <a href="https://wordpress.org/plugins/woo-checkout-field-editor-pro/" target="_blank" rel="noopener" class="project-row-link" aria-label="Visit plugin"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <p>Customize and manage checkout fields in WooCommerce stores.</p>
+                        <div class="project-tags"><span>PHP</span><span>WooCommerce</span><span>React</span></div>
+                    </article>
+
+                    <article class="project-row glass-card reveal" data-category="wordpress">
+                        <div class="project-row-glow"></div>
+                        <div class="project-row-header">
+                            <div>
+                                <span class="project-type-badge wordpress">WordPress</span>
+                                <h3><a href="https://wordpress.org/plugins/woo-extra-product-options/" target="_blank" rel="noopener">Extra Product Options For WooCommerce</a></h3>
+                            </div>
+                            <a href="https://wordpress.org/plugins/woo-extra-product-options/" target="_blank" rel="noopener" class="project-row-link" aria-label="Visit plugin"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <p>Custom product addons and fields for WooCommerce stores.</p>
+                        <div class="project-tags"><span>PHP</span><span>WooCommerce</span><span>React</span></div>
+                    </article>
+
+                    <article class="project-row glass-card reveal" data-category="wordpress">
+                        <div class="project-row-glow"></div>
+                        <div class="project-row-header">
+                            <div>
+                                <span class="project-type-badge wordpress">WordPress</span>
+                                <h3><a href="https://wordpress.org/plugins/webpressor-webp-image-converter-optimizer/" target="_blank" rel="noopener">WebPressor – WebP Image Converter & Optimizer</a></h3>
+                            </div>
+                            <a href="https://wordpress.org/plugins/webpressor-webp-image-converter-optimizer/" target="_blank" rel="noopener" class="project-row-link" aria-label="Visit plugin"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <p>Convert and optimize images to WebP format for improved website performance.</p>
+                        <div class="project-tags"><span>PHP</span><span>React</span></div>
+                    </article>
+
+                    <article class="project-row glass-card reveal" data-category="wordpress">
+                        <div class="project-row-glow"></div>
+                        <div class="project-row-header">
+                            <div>
+                                <span class="project-type-badge wordpress">WordPress</span>
+                                <h3><a href="https://wordpress.org/plugins/wacdmg-ai-content-assistant/" target="_blank" rel="noopener">AI Content & Meta Assistant</a></h3>
+                            </div>
+                            <a href="https://wordpress.org/plugins/wacdmg-ai-content-assistant/" target="_blank" rel="noopener" class="project-row-link" aria-label="Visit plugin"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <p>Generate AI-powered content and meta descriptions for posts and pages.</p>
+                        <div class="project-tags"><span>PHP</span><span>React</span><span>Groq API</span></div>
+                    </article>
+
+                    <article class="project-row glass-card reveal" data-category="mobile web">
+                        <div class="project-row-glow"></div>
+                        <div class="project-row-header">
+                            <div>
+                                <span class="project-type-badge mobile">Full-Stack</span>
+                                <h3>Quick Commerce Platform</h3>
+                            </div>
+                        </div>
+                        <p>Full-stack e-commerce application for local businesses with quick delivery and location tracking.</p>
+                        <div class="project-tags"><span>React Native</span><span>Node.js</span><span>MongoDB</span><span>Google Maps API</span></div>
+                    </article>
+
                 </div>
-
-                <p>
-                    Google Sheets add-on to sync WooCommerce store data
-                    directly into spreadsheets.
-                </p>
-
-                <div class="project-meta">
-                    <span>Apps Script</span>
-                    <span>JavaScript</span>
-                </div>
-            </article>
-
-            <!-- PROJECT - Cliply -->
-            <article class="project-row animate">
-                <div class="project-row-header">
-                    <div>
-                        <span class="project-type mobile">Mobile App</span>
-                        <h3>
-                            <a href="https://play.google.com/store/apps/details?id=com.techbysh.cliply&hl=en_IN" target="_blank" rel="noopener">
-                                Cliply — Save text. Copy later.
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.techbysh.cliply&hl=en_IN" target="_blank" title="Live">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <p>
-                    Mobile clipboard manager app to save and organize text
-                    snippets for later use.
-                </p>
-
-                <div class="project-meta">
-                    <span>Flutter</span>
-                    <span>Dart</span>
-                </div>
-            </article>
-
-            <!-- PROJECT - Fliptap -->
-            <article class="project-row animate">
-                <div class="project-row-header">
-                    <div>
-                        <span class="project-type mobile">Mobile App</span>
-                        <h3>
-                            <a href="https://play.google.com/store/apps/details?id=com.techbysh.fliptap&hl=en_IN" target="_blank" rel="noopener">
-                                Fliptap — Counter & Tally App
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.techbysh.fliptap&hl=en_IN" target="_blank" title="Live">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <p>
-                    A simple counter app with motion, touch controls, and smooth haptic feedback.
-                </p>
-
-                <div class="project-meta">
-                    <span>Flutter</span>
-                    <span>Dart</span>
-                </div>
-            </article>
-
-            <!-- PROJECT - Offload Media – Cloud Storage -->
-            <article class="project-row animate">
-                <div class="project-row-header">
-                    <div>
-                        <span class="project-type wordpress">WordPress Plugin</span>
-                        <h3>
-                            <a href="https://wordpress.org/plugins/offload-media-cloud-storage/" target="_blank" rel="noopener">
-                                Offload Media – Cloud Storage
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://wordpress.org/plugins/offload-media-cloud-storage/" target="_blank" title="Live">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <p>
-                    WordPress plugin to offload media files to cloud storage
-                    providers like AWS S3, DigitalOcean Spaces, and Wasabi.
-                </p>
-
-                <div class="project-meta">
-                    <span>PHP</span>
-                    <span>WooCommerce</span>
-                    <span>React</span>
-                </div>
-            </article>
-
-            <!-- PROJECT - Checkout Field Editor (Checkout Manager) for WooCommerce -->
-            <article class="project-row animate">
-                <div class="project-row-header">
-                    <div>
-                        <span class="project-type wordpress">WordPress Plugin</span>
-                        <h3>
-                            <a href="https://wordpress.org/plugins/woo-checkout-field-editor-pro/" target="_blank" rel="noopener">
-                                Checkout Field Editor (Checkout Manager) for WooCommerce
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://wordpress.org/plugins/woo-checkout-field-editor-pro/" target="_blank" title="Live">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <p>
-                    WordPress plugin to customize and manage checkout fields
-                    in WooCommerce stores.
-                </p>
-
-                <div class="project-meta">
-                    <span>PHP</span>
-                    <span>WooCommerce</span>
-                    <span>React</span>
-                </div>
-            </article>
-
-            <!-- PROJECT - WEPO -->
-            <article class="project-row animate">
-                <div class="project-row-header">
-                    <div>
-                        <span class="project-type wordpress">WordPress Plugin</span>
-                        <h3>
-                            <a href="https://wordpress.org/plugins/woo-extra-product-options/" target="_blank" rel="noopener">
-                                Extra Product Options For WooCommerce | Custom Product Addons and Fields
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://wordpress.org/plugins/woo-extra-product-options/" target="_blank" title="Live">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <p>
-                    WordPress plugin to customize and manage extra product options
-                    in WooCommerce stores.
-                </p>
-
-                <div class="project-meta">
-                    <span>PHP</span>
-                    <span>WooCommerce</span>
-                    <span>React</span>
-                </div>
-            </article>
-
-            <!-- PROJECT - WebPressor -->
-            <article class="project-row animate">
-                <div class="project-row-header">
-                    <div>
-                        <span class="project-type wordpress">WordPress Plugin</span>
-                        <h3>
-                            <a href="https://wordpress.org/plugins/webpressor-webp-image-converter-optimizer/" target="_blank" rel="noopener">
-                                WebPressor – WebP Image Converter & Optimizer
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://wordpress.org/plugins/webpressor-webp-image-converter-optimizer/" target="_blank" title="Live">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <p>
-                    WordPress plugin to convert and optimize images to WebP format
-                    for improved website performance.
-                </p>
-
-                <div class="project-meta">
-                    <span>PHP</span>
-                    <span>WooCommerce</span>
-                    <span>React</span>
-                </div>
-            </article>
-
-            <!-- PROJECT - AI Content & Meta Assistant -->
-            <article class="project-row animate">
-                <div class="project-row-header">
-                    <div>
-                        <span class="project-type wordpress">WordPress Plugin</span>
-                        <h3>
-                            <a href="https://wordpress.org/plugins/wacdmg-ai-content-assistant/" target="_blank" rel="noopener">
-                                AI Content & Meta Assistant
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://wordpress.org/plugins/wacdmg-ai-content-assistant/" target="_blank" title="Live">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <p>
-                    WordPress plugin to generate AI-powered content and meta
-                    descriptions for posts and pages.
-                </p>
-
-                <div class="project-meta">
-                    <span>PHP</span>
-                    <span>WooCommerce</span>
-                    <span>React</span>
-                    <span>Groq API</span>
-                </div>
-            </article>
-
-            <!-- PROJECT - Quick Commerce Platform -->
-            <article class="project-row animate">
-                <div class="project-row-header">
-                    <div>
-                        <span class="project-type mobile">Mobile App</span>
-                        <h3>
-                            <a href="#" target="_blank" rel="noopener">
-                                Quick Commerce Platform
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank" title="Live">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <p>
-                    Full-stack e-commerce application for local businesses with quick delivery solutions and location tracking.
-                </p>
-
-                <div class="project-meta">
-                    <span>React Native</span>
-                    <span>Node.js</span>
-                    <span>MongoDB</span>
-                    <span>Google Maps API</span>
-                </div>
-            </article>
-
-        </div>
+            </div>
+        </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2024 Salmanul Haris</p>
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Salmanul Haris. Crafted with care.</p>
+            <a href="../index.html#contact" class="btn btn-glass">Contact Me</a>
+        </div>
     </footer>
 
+    <script src="../script.js"></script>
     <script src="projects.js"></script>
 </body>
 </html>
